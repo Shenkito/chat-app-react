@@ -1,10 +1,11 @@
+import MessageForm from './components/MessageForm';
 
 function App() {
 
   return (
     <>
       <div>
-        Hey , this is the App !
+        <MessageForm />
       </div>
     </>
   )
