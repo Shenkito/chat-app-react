@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import * as messageService from '../services/messageService';
+import * as messageService from '../../services/messageService';
 
 export default function MessageForm() {
-    
+
     const [text, setText] = useState('');
     const [sender, setSender] = useState('');
 
