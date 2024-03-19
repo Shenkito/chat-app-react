@@ -1,6 +1,6 @@
 ul.nav.justify-content-center {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     background-color: blueviolet;
 }
