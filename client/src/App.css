@@ -1,6 +1,16 @@
 .main-app {
     margin: 0;
     padding: 0;
-    display: flex;
     box-sizing: border-box;
+    /* border: 5px solid black; */
+    min-width: 800px;
+    max-width: 100%; /* Allow the app to be as wide as the viewport permits */
+    height: 100vh;
+}
+
+/* Apply specific styles for smaller screens */
+@media only screen and (max-width: 800px) {
+    .main-app {
+        min-width: auto; /* Remove minimum width restriction for smaller screens */
+    }
 }
