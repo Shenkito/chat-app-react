@@ -1,21 +1,26 @@
-.introduction-section {
-    background-color: #f9f9f9;
-    padding: 50px 0;
-}
-
-.container {
+.home-container {
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
+    /* max-width: 100%; */
+    margin: 0;
+    padding: 0;
     text-align: center;
+}
+
+.welcome-section {
+    margin: 1em;
+    padding: 1em;
+    margin-bottom: 0em;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
 }
 
 .feature-highlights {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 30px;
 }
 
 .feature {
@@ -26,15 +31,60 @@
 .feature i {
     font-size: 48px;
     margin-bottom: 20px;
-    color: cornflowerblue;
+    margin-top: 10px;
+    color: #007bff;
 }
 
 .feature h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
+    font-size: 1.5em;
 }
 
 .feature p {
-    font-size: 18px;
+    font-size: 1.2em;
     color: #555;
+}
+
+.signup-login-section {
+    background-color: #007bff;
+    color: #fff;
+    margin: 0;
+    padding: 1em;
+}
+
+.signup-login-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.signup-login-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #28a745;
+}
+
+.btn-secondary {
+    background-color: white;
+    color: #0056b3;
+}
+
+.btn:hover {
+    background-color: #0056b3;
 }

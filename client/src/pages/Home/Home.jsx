@@ -2,8 +2,8 @@ import '../Home/Home.css'
 
 export default function Home() {
     return (
-        <section className="introduction-section">
-            <div className="container">
+        <div className="home-container">
+            <section className="welcome-section">
                 <h1>Welcome to Whisper</h1>
                 <p>A secure and intuitive messaging platform designed for seamless communication.</p>
                 <div className="feature-highlights">
@@ -18,10 +18,15 @@ export default function Home() {
                         <p>Create groups and chat with multiple friends at once.</p>
                     </div>
                 </div>
-                {/* <div className="screenshots">
-
-                </div> */}
-            </div>
-        </section>
+            </section>
+            <section className="signup-login-section">
+                <h2>Get Started with Whisper</h2>
+                <p>Join our community today and start connecting with friends!</p>
+                <div className="cta-buttons">
+                    <a href="/signup" className="btn btn-primary">Sign Up</a>
+                    <a href="/login" className="btn btn-secondary">Log In</a>
+                </div>
+            </section>
+        </div>
     )
 }
