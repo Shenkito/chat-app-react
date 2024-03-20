@@ -7,7 +7,7 @@ export default function NavBar() {
 
         <ul className="nav justify-content-center">
             <li className="nav-item">
-                <Link to="/home" className="nav-link">
+                <Link to="/" className="nav-link">
                     <i className="fas fa-home"></i>
                 </Link>
             </li>
