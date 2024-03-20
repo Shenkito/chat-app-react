@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Metrophobic&display=swap');
+
 .main-app {
-    margin: 0;
-    padding: 0;
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+    padding: 0.3rem;
     box-sizing: border-box;
-    /* border: 5px solid black; */
     min-width: 800px;
     max-width: 100%;
     /* Allow the app to be as wide as the viewport permits */
     height: 100vh;
+    font-family: "Metrophobic", sans-serif;
+    font-size: 16px;
+    text-align: center;
 }
 
 /* Apply specific styles for smaller screens */
