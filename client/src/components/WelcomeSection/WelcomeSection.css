@@ -1,0 +1,36 @@
+.welcome-section {
+    margin: 1em;
+    padding: 1em;
+    margin-bottom: 0em;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+}
+
+.feature-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.feature {
+    flex: 0 1 300px;
+    margin: 0 20px;
+}
+
+.feature i {
+    font-size: 48px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    color: #007bff;
+}
+
+.feature h2 {
+    font-size: 1.5em;
+}
+
+.feature p {
+    font-size: 1.2em;
+    color: #555;
+}
