@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../SignupLoginSection/SignupLoginSection.css';
 
 export default function SignupLoginSection() {
@@ -6,8 +7,8 @@ export default function SignupLoginSection() {
             <h2>Get Started with Whisper</h2>
             <p>Join our community today and start connecting with friends!</p>
             <div className="cta-buttons">
-                <a href="/signup" className="btn btn-primary">Sign Up</a>
-                <a href="/login" className="btn btn-secondary">Log In</a>
+                <Link to="/login" className="btn btn-primary">Log In</Link>
+                <Link to="/signup" className="btn btn-secondary">Sign Up</Link>
             </div>
         </section>
     )
