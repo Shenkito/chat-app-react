@@ -47,7 +47,7 @@ export default function Login() {
                 />
                 <button type="submit" className="login-form-button">Login</button>
                 <p>
-                    If you are not registered, <Link to="/register" className="register-link">click here</Link> to register.
+                    If you are not registered, <Link to="/signup" className="register-link">click here</Link> to register.
                 </p>
             </form>
         </div>
