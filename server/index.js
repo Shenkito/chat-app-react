@@ -1,29 +1,28 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import express from 'express';
+import dotenv from 'dotenv'
+import cors from 'cors';
+
+import authRoutes from './routes/authRoutes.js'
+import connectToMongoDB from './db/connectToMongoDB.js';
 
 const app = express();
-app.use(cors());
+const PORT = process.env.PORT || 3001;
 
-const { Message } = require('./models/Message');
+dotenv.config();
 
-mongoose.connect(`mongodb://127.0.0.1:27017/chat-app-react`)
-    .then(() => console.log('DB connected...'))
-    .catch(err => console.log('DB error', err.message));
+// Allow to get/extract the input fields data (JSON payloads) from the req.body
 app.use(express.json());
 
-app.post('/messages', async (req, res) => {
-    try {
-        const { text, sender } = req.body;
-        const message = new Message({ text, sender });
-        await message.save();
-        res.status(201).json(message);
-    } catch (error) {
-        res.status(400).json({ error: error.message });
-    }
-});
+app.use("/api/auth", authRoutes)
 
+app.use(cors());
 
-app.listen(3001, () => {
-    console.log('Server is running on port 3001...');
+// app.get("/", (req, res) => {
+//     // this is my root route http://localhost:3001/
+//     res.send("Server is ready to use.")
+// });
+
+app.listen(PORT, () => {
+    connectToMongoDB()
+    console.log(`Server is running on port ${PORT}...`);
 });
