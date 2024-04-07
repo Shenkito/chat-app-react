@@ -1,8 +1,10 @@
 import express from 'express';
 import dotenv from 'dotenv'
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 import authRoutes from './routes/authRoutes.js'
+import messageRoutes from './routes/messageRoutes.js'
 import connectToMongoDB from './db/connectToMongoDB.js';
 
 const app = express();
@@ -12,8 +14,11 @@ dotenv.config();
 
 // Allow to get/extract the input fields data (JSON payloads) from the req.body
 app.use(express.json());
+// Before we use some of the routes , we access the cookies
+app.use(cookieParser());
 
 app.use("/api/auth", authRoutes)
+app.use("/api/messages", messageRoutes)
 
 app.use(cors());
 
