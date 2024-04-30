@@ -16,6 +16,7 @@ const GenderCheckbox = () => {
                 </label>
             </div>
         </div>
+        
     )
 }
 
