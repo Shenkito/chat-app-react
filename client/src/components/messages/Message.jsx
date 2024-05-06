@@ -8,6 +8,7 @@ const Message = () => {
                 </div>
             </div>
             <div className={`chat-bubble text-white bg-blue-500`}>Hi! What's up ? :)</div>
+            <div className="chat-footer text-xs flex gap-1 items-center text-blue-500">8:40</div>
         </div>
 
     )
