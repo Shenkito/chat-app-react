@@ -59,7 +59,7 @@ const SignUp = () => {
     )
 }
 
-export default SignUp
+export default SignUp;
 
 
 // const SignUp = () => {
@@ -120,4 +120,4 @@ export default SignUp
 //     )
 // }
 
-// export default SignUp
+// export default SignUp;

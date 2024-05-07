@@ -17,7 +17,7 @@ const Sidebar = () => {
     )
 }
 
-export default Sidebar
+export default Sidebar;
 
 
 // import Conversations from "./Conversations"
@@ -39,4 +39,4 @@ export default Sidebar
 //     )
 // }
 
-// export default Sidebar
+// export default Sidebar;

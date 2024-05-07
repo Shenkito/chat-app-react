@@ -21,7 +21,7 @@ const Conversation = () => {
 
 }
 
-export default Conversation
+export default Conversation;
 
 
 // const Conversation = () => {
@@ -47,4 +47,4 @@ export default Conversation
 
 // }
 
-// export default Conversation
+// export default Conversation;

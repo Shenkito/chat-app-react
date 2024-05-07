@@ -15,7 +15,7 @@ const SearchInput = () => {
 
 }
 
-export default SearchInput
+export default SearchInput;
 
 
 // import { IoSearchSharp } from "react-icons/io5";
@@ -35,4 +35,4 @@ export default SearchInput
 
 // }
 
-// export default SearchInput
+// export default SearchInput;

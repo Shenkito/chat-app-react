@@ -20,7 +20,7 @@ const GenderCheckbox = () => {
     )
 }
 
-export default GenderCheckbox
+export default GenderCheckbox;
 
 
 // const GenderCheckbox = () => {
@@ -44,4 +44,4 @@ export default GenderCheckbox
 //     )
 // }
 
-// export default GenderCheckbox
+// export default GenderCheckbox;
