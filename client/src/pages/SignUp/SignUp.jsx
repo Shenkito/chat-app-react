@@ -14,10 +14,10 @@ const SignUp = () => {
         gender: '',
     });
 
-    const {loading, signup} = useSignup()
+    const { loading, signup } = useSignup()
 
     const handleCheckboxGenderChange = (gender) => {
-        setInputs({...inputs, gender})
+        setInputs({ ...inputs, gender })
     };
 
     const handleSubmit = async (e) => {
@@ -41,9 +41,9 @@ const SignUp = () => {
                         <label className="label p-2">
                             <span className="text-base label-text text-black">Full Name</span>
                         </label>
-                        <input type="text" placeholder="Enter full name" className="w-full input input-bordered h-10" 
+                        <input type="text" placeholder="Enter full name" className="w-full input input-bordered h-10"
                             value={inputs.fullName}
-                            onChange={(e) => setInputs({...inputs, fullName: e.target.value})}
+                            onChange={(e) => setInputs({ ...inputs, fullName: e.target.value })}
                         />
                     </div>
 
@@ -51,9 +51,9 @@ const SignUp = () => {
                         <label className="label p-2">
                             <span className="text-base label-text text-black">Username</span>
                         </label>
-                        <input type="text" placeholder="Enter username" className="w-full input input-bordered h-10" 
+                        <input type="text" placeholder="Enter username" className="w-full input input-bordered h-10"
                             value={inputs.username}
-                            onChange={(e) => setInputs({...inputs, username: e.target.value})}
+                            onChange={(e) => setInputs({ ...inputs, username: e.target.value })}
                         />
                     </div>
 
@@ -61,9 +61,9 @@ const SignUp = () => {
                         <label className="label p-2">
                             <span className="text-base label-text text-black">Password</span>
                         </label>
-                        <input type="password" placeholder="Enter password" className="w-full input input-bordered h-10" 
+                        <input type="password" placeholder="Enter password" className="w-full input input-bordered h-10"
                             value={inputs.password}
-                            onChange={(e) => setInputs({...inputs, password: e.target.value})}
+                            onChange={(e) => setInputs({ ...inputs, password: e.target.value })}
                         />
                     </div>
 
@@ -71,13 +71,13 @@ const SignUp = () => {
                         <label className="label p-2">
                             <span className="text-base label-text text-black">Confirm password</span>
                         </label>
-                        <input type="password" placeholder="Confirm password" className="w-full input input-bordered h-10" 
+                        <input type="password" placeholder="Confirm password" className="w-full input input-bordered h-10"
                             value={inputs.confirmPassword}
-                            onChange={(e) => setInputs({...inputs, confirmPassword: e.target.value})}
+                            onChange={(e) => setInputs({ ...inputs, confirmPassword: e.target.value })}
                         />
                     </div>
 
-                    <GenderCheckbox onCheckboxGenderChange = {handleCheckboxGenderChange} selectedGender={inputs.gender} />
+                    <GenderCheckbox onCheckboxGenderChange={handleCheckboxGenderChange} selectedGender={inputs.gender} />
 
                     <div className="text-center">
                         <Link to="/login" className="text-sm hover:underline hover:text-blue-600 mt-2 inline-block">
@@ -86,13 +86,17 @@ const SignUp = () => {
                     </div>
 
                     <div>
-                        <button className="btn btn-block btn-sm mt-2 hover:text-blue-600"> Sign Up </button>
+                        <button className="btn btn-block btn-sm mt-2 hover:text-blue-600"
+                            disabled={loading}
+                        >
+                            {loading ? <span className='loading loading-spinner'></span> : "Sign Up"}
+                        </button>
                     </div>
 
                 </form>
             </div>
         </div>
-        
+
     )
 }
 
