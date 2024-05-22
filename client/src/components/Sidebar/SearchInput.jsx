@@ -11,9 +11,8 @@ const SearchInput = () => {
             </button>
         </form>
 
-    )
-
-}
+    );
+};
 
 export default SearchInput;
 

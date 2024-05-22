@@ -11,7 +11,7 @@ const Message = () => {
             <div className="chat-footer text-xs flex gap-1 items-center text-blue-500">8:40</div>
         </div>
 
-    )
-}
+    );
+};
 
 export default Message;

@@ -8,12 +8,14 @@ const Login = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
-    const { loading, login } = useLogin()
+    const { loading, login } = useLogin();
 
     const handleSubmit = async (e) => {
-        e.preventDefault()
+
+        e.preventDefault();
         await login(username, password);
-    }
+
+    };
 
     return (
 
@@ -63,8 +65,8 @@ const Login = () => {
             </div>
         </div>
 
-    )
-}
+    );
+};
 
 export default Login;
 

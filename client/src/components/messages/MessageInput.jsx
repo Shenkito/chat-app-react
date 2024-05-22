@@ -5,7 +5,7 @@ const MessageInput = () => {
 
         <form className="px-4 my-3">
             <div className="w-full relative">
-                <input type="text" 
+                <input type="text"
                     className="border text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-600 text-white"
                     placeholder="Send a message"
                 />
@@ -15,8 +15,8 @@ const MessageInput = () => {
             </div>
         </form>
 
-    )
-}
+    );
+};
 
 export default MessageInput;
 
@@ -28,7 +28,7 @@ export default MessageInput;
 
 //         <form className="px-4 my-3">
 //             <div className="w-full">
-//                 <input type="text" 
+//                 <input type="text"
 //                     className="border text-sm rounded-lg block w-full p-2.5 bg-gray-900 border-gray-600 text-white"
 //                     placeholder="Send a message"
 //                 />

@@ -14,6 +14,7 @@ const LogoutButton = () => {
                 <span className="loading loading-spinner"></span>
             )}
         </div>
+
     );
 };
 

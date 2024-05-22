@@ -21,9 +21,8 @@ const Messages = () => {
             <Message />
         </div>
 
-    )
-
-}
+    );
+};
 
 export default Messages;
 

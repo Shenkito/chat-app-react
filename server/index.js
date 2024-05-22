@@ -1,11 +1,11 @@
 import express from 'express';
-import dotenv from 'dotenv'
+import dotenv from 'dotenv';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
-import authRoutes from './routes/authRoutes.js'
-import messageRoutes from './routes/messageRoutes.js'
-import userRoutes from './routes/userRoutes.js'
+import authRoutes from './routes/authRoutes.js';
+import messageRoutes from './routes/messageRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 import connectToMongoDB from './db/connectToMongoDB.js';
 
@@ -19,9 +19,9 @@ app.use(express.json());
 // Before we use some of the routes , we access the cookies
 app.use(cookieParser());
 
-app.use("/api/auth", authRoutes)
-app.use("/api/messages", messageRoutes)
-app.use("/api/users", userRoutes)
+app.use("/api/auth", authRoutes);
+app.use("/api/messages", messageRoutes);
+app.use("/api/users", userRoutes);
 
 app.use(cors());
 
@@ -31,6 +31,6 @@ app.use(cors());
 // });
 
 app.listen(PORT, () => {
-    connectToMongoDB()
+    connectToMongoDB();
     console.log(`Server is running on port ${PORT}...`);
 });
