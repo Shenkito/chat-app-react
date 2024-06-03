@@ -21,7 +21,7 @@ const MessageContainer = () => {
 
         <div className="md:min-w-[450px] flex flex-col">
             {!selectedConversation ? (
-                <NoChatSelected authUser={authUser} />
+                <NoChatSelected />
             ) : (
                 <>
                     <div className="bg-sky-500 px-4 py-2 mb-2">
@@ -40,14 +40,14 @@ const MessageContainer = () => {
 
 export default MessageContainer;
 
-const NoChatSelected = ({authUser}) => {
-
+const NoChatSelected = () => {
+    const { authUser } = useAuthContext();
     return (
 
         <div className="flex items-center justify-center w-full h-full">
             <div className="px-4 text-center sm:text-lg md:text-xl text-gray-400 font-semibold flex flex-col items-center gap-2">
-                <p>Welcome {authUser.username}</p>
-                <p>Select a chat to start messagin</p>
+                <p>Welcome 👋 {authUser.username}</p>
+                <p>Select a chat to start messaging.</p>
                 <TiMessages className="text-3xl md:text-6xl text-center" />
             </div>
         </div>
