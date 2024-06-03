@@ -9,7 +9,7 @@ import userRoutes from './routes/userRoutes.js';
 
 import connectToMongoDB from './db/connectToMongoDB.js';
 
-const app = express();
+import { app, server } from './socket/socket.js';
 const PORT = process.env.PORT || 3001;
 
 dotenv.config();
@@ -30,7 +30,7 @@ app.use(cors());
 //     res.send("Server is ready to use.")
 // });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     connectToMongoDB();
     console.log(`Server is running on port ${PORT}...`);
 });
