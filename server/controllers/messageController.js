@@ -80,3 +80,25 @@ export const getMessages = async (req, res) => {
 
     };
 };
+
+export const editMessage = async (req, res) => {
+    const { id } = req.params;
+    const { message } = req.body;
+
+    try {
+
+        const updatedMessage = await Message.findByIdAndUpdate(id, { message }, { new: true });
+
+        if (!updatedMessage) {
+            return res.status(404).json({ message: "Message not found" });
+        }
+
+        res.json(updatedMessage);
+
+    } catch (error) {
+
+        console.log("Error in editMessage controller", error.message);
+        res.status(500).json({ error: "Internal Server error" });
+
+    }
+};
