@@ -52,7 +52,7 @@ const Message = ({ message }) => {
                     />
                 </div>
             </div>
-            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass}`}>
+            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} max-w-xs break-words m-0.5`}>
                 {isEditing ? (
                     <div className="flex flex-col gap-2">
                         <input
