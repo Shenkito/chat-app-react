@@ -102,3 +102,24 @@ export const editMessage = async (req, res) => {
 
     }
 };
+
+export const deleteMessage = async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        
+        const deletedMessage = await Message.findByIdAndDelete(id);
+
+        if(!deletedMessage) {
+            return res.status(404).json({ message: "Message not found "});
+        }
+
+        res.json({ message: "Message deleted successfully" });
+
+    } catch (error) {
+        
+        console.log("Error in deleteMessage controller", error.message);
+        res.status(500).json({ error: "Internal Server error" });
+        
+    }
+};

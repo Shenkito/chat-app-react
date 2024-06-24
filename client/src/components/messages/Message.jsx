@@ -3,13 +3,16 @@ import { useAuthContext } from "../../context/AuthContext";
 import { extractTime } from "../../utils/extractTime";
 import useConversation from "../../zustand/useConversation";
 import useEditMessage from "../../hooks/useEditMessage";
+import useDeleteMessage from "../../hooks/useDeleteMessage";
 
 const Message = ({ message }) => {
     const { authUser } = useAuthContext();
     const { selectedConversation } = useConversation();
     const { editMessage } = useEditMessage();
+    const { deleteMessage } = useDeleteMessage();
 
     const [isEditing, setIsEditing] = useState(false);
+    const [isDeleting, setIsDeleting] = useState(false);
     const [newMessage, setNewMessage] = useState(message.message);
 
     useEffect(() => {
@@ -32,7 +35,6 @@ const Message = ({ message }) => {
             setIsEditing(false);
         } catch (error) {
             console.error("Failed to edit message:", error);
-
         }
     };
 
@@ -41,18 +43,34 @@ const Message = ({ message }) => {
         setIsEditing(false);
     };
 
-    return (
+    const handleDelete = async () => {
+        try {
+            await deleteMessage(message._id);
+        } catch (error) {
+            console.error("Failed to delete message", error);
+        }
+    };
 
+    const showDeleteConfirmation = () => {
+        setIsDeleting(true);
+    };
+
+    const cancelDelete = () => {
+        setIsDeleting(false);
+    };
+
+    return (
         <div className={`chat ${chatClassName}`}>
             <div className="chat-image avatar">
-                <div className="w-10 rounded-r-full">
+                <div className="w-10 h-10 rounded-full overflow-hidden">
                     <img
-                        alt="Tailwind CSS chat bubble component"
+                        alt="Profile"
                         src={profilePic}
+                        className="object-cover w-full h-full"
                     />
                 </div>
             </div>
-            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} max-w-xs break-words m-0.5`}>
+            <div className={`chat-bubble text-white ${bubbleBgColor} ${shakeClass} max-w-xs md:max-w-md lg:max-w-lg break-words rounded-lg p-2`}>
                 {isEditing ? (
                     <div className="flex flex-col gap-2">
                         <input
@@ -70,20 +88,33 @@ const Message = ({ message }) => {
             </div>
             <div className="chat-footer text-xs flex flex-col items-end gap-1 text-blue-500 mt-1">
                 <div className="flex gap-2">
-                    {isEditing && (
+                    {isEditing ? (
                         <>
                             <button onClick={handleEdit} className="btn btn-primary btn-xs">Save</button>
                             <button onClick={handleCancelEdit} className="btn btn-secondary btn-xs">Cancel</button>
                         </>
-                    )}
-                    {!isEditing && fromMe && (
-                        <button onClick={() => setIsEditing(true)} className="btn btn-secondary btn-xs">Edit</button>
+                    ) : (
+                        fromMe && (
+                            <>
+                                {isDeleting ? (
+                                    <>
+                                        <span>Are you sure?</span>
+                                        <button onClick={handleDelete} className="btn btn-danger btn-xs">Yes</button>
+                                        <button onClick={cancelDelete} className="btn btn-secondary btn-xs">No</button>
+                                    </>
+                                ) : (
+                                    <>
+                                        <button onClick={() => setIsEditing(true)} className="btn btn-secondary btn-xs">Edit</button>
+                                        <button onClick={showDeleteConfirmation} className="btn btn-danger btn-xs">Delete</button>
+                                    </>
+                                )}
+                            </>
+                        )
                     )}
                 </div>
                 <div>{formattedTime}{formattedUpdatedTime}</div>
             </div>
         </div>
-
     );
 };
 

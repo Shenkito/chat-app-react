@@ -12,6 +12,9 @@ const useConversation = create((set) => ({
             message._id === updatedMessage._id ? updatedMessage : message
         ),
     })),
+    deleteCurrentMessage: (id) => set((state) => ({
+        messages: state.messages.filter((message) => message._id !== id)
+    })),
 
 }));
 
