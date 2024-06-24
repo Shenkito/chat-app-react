@@ -12,7 +12,7 @@ const useDeleteMessage = () => {
         setError(null);
 
         try {
-            
+
             const response = await fetch(`/api/messages/delete/${id}`, {
                 method: "DELETE",
                 headers: {
@@ -31,7 +31,7 @@ const useDeleteMessage = () => {
             setLoading(false);
 
         } catch (error) {
-            
+
             setLoading(false);
             setError(error.message || "Error deleting message");
             throw error;
