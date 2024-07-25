@@ -14,7 +14,7 @@ Whisper is a real-time chat application built using the MERN stack (MongoDB/Mong
 ![Home Page](https://i.ibb.co/tJSs4v0/Whisper-Home-Page.png)
 
 ### Conversation Page
-![Conversation Page](https://i.ibb.co/JRfvJ3D/Whisper-Conversation-Page.png)
+![Conversation Page](https://i.ibb.co/JRfvJ3D/Whisper-Conversation-Page.PNG)
 
 ## Features
 
