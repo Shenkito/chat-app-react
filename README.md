@@ -35,4 +35,4 @@ Whisper is a real-time chat application built using the MERN stack (MongoDB/Mong
 
 ## Access the application
 
-Open your browser and navigate to `https://chat-app-react-are6.onrender.com/` to see the application in action.
+Open your browser and navigate to (https://chat-app-react-are6.onrender.com/) to see the application in action.
