@@ -5,16 +5,16 @@ Whisper is a real-time chat application built using the MERN stack (MongoDB/Mong
 ## Screenshots
 
 ### Login Page
-![Login Page](https://i.ibb.co/rHcKktS/login-page.PNG)
+![Login Page](https://github.com/Shenkito/chat-app-react/blob/main/app-screenshots/login_page.png?raw=true)
 
 ### Sign Up Page
-![Sign Up Page](https://i.ibb.co/PTrtzWG/signup-page.PNG)
+![Sign Up Page](https://github.com/Shenkito/chat-app-react/blob/main/app-screenshots/signup_page.png?raw=true)
 
 ### Home Page
-![Home Page](https://i.ibb.co/s1ZxQLY/home-page.PNG)
+![Home Page](https://github.com/Shenkito/chat-app-react/blob/main/app-screenshots/home_page.png?raw=true)
 
 ### Conversation Page
-![Conversation Page](https://i.ibb.co/Yy9N12h/conversation-page.PNG)
+![Conversation Page](https://github.com/Shenkito/chat-app-react/blob/main/app-screenshots/conversation_page.png?raw=true)
 
 ## Features
 
