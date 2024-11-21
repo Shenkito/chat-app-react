@@ -36,3 +36,4 @@ Open your browser and navigate to (https://chat-app-react-are6.onrender.com/) to
 - **Real-Time Communication**: Socket.IO
 - **State Management**: Zustand
 - **Error Handling**: React Hot Toast
+- **Deployed**: https://render.com/
