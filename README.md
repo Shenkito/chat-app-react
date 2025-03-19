@@ -1,3 +1,7 @@
+## 🚧 Project Status  
+
+This project is **currently under active development**. Some features may be incomplete or subject to change. Stay tuned for updates! 🚀  
+
 # Whisper
 
 Whisper is a real-time chat application built using the MERN stack (MongoDB/Mongoose, Express.js, React, Node.js), Socket.IO for real-time communication, TailwindCSS, Daisy UI for styling, Zustand for global state management, and React Hot Toast for error handling.
